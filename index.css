@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: inter;
+}
+
+html{
+    font-size: 15px;
+}
+ 
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+p{
+    line-height: 1.8;
+    color:  hsl(236, 13%, 42%);
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.header nav{
+    transition: all 0.3s ease-in;
+    z-index: 1111;
+}
+
+.header nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    height: 100vh;
+}
+
+ul{
+    list-style-type: none;
+    padding-top: 35%;
+}
+
+li{
+    font-size: 25px;
+    line-height: 70px;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.menu-icon{
+    position: absolute;
+    background: transparent;
+    right: 0;
+    border: none;
+    width: 60px;
+}
+
+.close-icon{
+    width: 40px;
+}
+
+.close{
+    position: absolute;
+    background: transparent;
+    border: none;
+    top: 15px;
+    right: 10px;   
+}
+
+.showcase h1{
+    color: hsl(240, 100%, 5%);
+    margin: 1rem 0;
+    font-size: xx-large;
+}
+
+.showcase div div div p{
+    margin: 1rem 0;
+}
+
+.showcase button{
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.showcase button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.showcase > div:nth-child(2){
+    background-color: hsl(240, 100%, 5%);
+    margin-top: 2.5rem;
+    padding: 1.25rem;
+}
+
+.showcase div h2{
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 1rem;
+}
+
+.showcase div h3{
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.showcase div h3:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.showcase div article:not(:last-child){
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.showcase div article{
+    margin: 2rem 0;
+}
+
+.card{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.card article{
+    display: flex;
+    gap: 1rem;
+    margin: 1.25rem 0;
+    align-items: center;
+}
+
+.card article span{
+    color: hsl(236, 13%, 42%);
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.card h4{
+    font-size: 20px;
+    color: hsl(240, 100%, 5%);
+}
+
+.card article img{
+    width: 150px;
+    height: auto;
+}
+
+.card h4:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+@media(min-width: 768px){
+    body{
+        margin: 1.25rem;
+    }
+
+    .header{
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header nav{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        background-color: transparent;
+        width: 100%;
+        height: unset;
+        font-size: 25px;
+        line-height: unset;
+    }
+
+    .menu-icon, .close{
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    ul{
+        display: flex;
+        padding-top: 0;
+    }
+
+    li{
+        padding: 1rem;
+    }
+
+    li:hover{
+        color: hsl(5, 85%, 63%);
+        cursor: pointer;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media(min-width: 1024px){
+    body{
+        max-width: 1440px;
+        margin: auto;
+        padding-bottom: 4rem;
+    }
+
+    .header{
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header nav{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        background-color: transparent;
+        width: 100%;
+        height: unset;
+        font-size: 25px;
+        line-height: unset;
+    }
+
+    .menu-icon, .close{
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    ul{
+        display: flex;
+    }
+
+    li{
+        padding: 1rem;
+    }
+
+    li:hover{
+        color: hsl(5, 85%, 63%);
+        cursor: pointer;
+    }
+
+    .showcase{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .showcase > div:nth-child(2){
+        margin-top: 0;
+    }
+
+    .showcase > div:first-child article{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        place-items: center;
+        margin-top: 0%;
+    }
+
+    .showcase h1{
+        font-size: 3rem;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
